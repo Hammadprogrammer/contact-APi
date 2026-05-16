@@ -26,8 +26,8 @@ export async function POST(req: NextRequest) {
 
     const recipients = [
       "info@allexamhelp.com",
-      "hammadzahid221@gmail.com",
-      "zahidhammad589@gmail.com"
+      "Syedukasha96@gmail.com",
+      "faisalmcc5i@gmail.com"
     ];
 
     await transporter.sendMail({

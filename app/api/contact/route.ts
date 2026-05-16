@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
 
     const recipients = [
       "info@hireclassbuddy.com",
-      "zahidhammad589@gmail.com",
+      "Syedukasha96@gmail.com",
       "faisalmcc5i@gmail.com"
     ];
 
