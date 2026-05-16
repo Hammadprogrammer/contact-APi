@@ -82,16 +82,10 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    const response = NextResponse.json(
+    return NextResponse.json(
       { message: "Email sent successfully!" },
       { status: 200 }
     );
-
-    response.headers.set("Access-Control-Allow-Origin", "*"); 
-    response.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
-    response.headers.set("Access-Control-Allow-Headers", "Content-Type");
-
-    return response;
 
   } catch (error) {
     console.error("Email Error:", error);
@@ -100,14 +94,4 @@ export async function POST(req: NextRequest) {
       { status: 500 }
     );
   }
-}
-
-export async function OPTIONS() {
-  return NextResponse.json({}, {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
-    },
-  });
 }

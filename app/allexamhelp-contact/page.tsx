@@ -40,9 +40,9 @@ export default function AllExamHelpContact() {
       } else {
         throw new Error("Server error: Received non-JSON response.");
       }
-    } catch (error: any) {
+    } catch (error) {
       console.error("Frontend Error:", error);
-      alert(error.message || "Something went wrong");
+      alert(error instanceof Error ? error.message : "Something went wrong");
     } finally {
       setLoading(false);
     }
